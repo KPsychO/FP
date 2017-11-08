@@ -1,5 +1,6 @@
 
-/* 	 --------------------------------------------
+/* 	
+	 --------------------------------------------
 	| Piedra - Papel - Tijeras - Lagarto - Spock |
 	 --------------------------------------------
 */
@@ -12,21 +13,20 @@
 
 using namespace std;
 
-const int ELEMENTN = 5;
 typedef enum { Piedra, Papel, Tijeras, Lagarto, Spock } tElemento;
 typedef enum { empate, ganaHumano, ganaMaquina } tResultado;
 
-bool localizacionJugador(string apodo, string contra);
+bool localizacionJugador(string apodo, string contra);			//	Comprobamos que el apodo proporcionado se encuentre en el archivo de registro y devolvemos un valor bool en cada uno de los casos
 
-int menu();
+int menu();														//	Imprimimos un menú con las opciones a las que tiene acceso el usuario (Solo registrados) y la devolvemos a la funcion main
 
-bool mostrarReglas();
+bool mostrarReglas();											// Imprime por pantalla todo el texto situado en el archivo Reglas.txt salvo el centinela XXX que se encuentra al final del mismo
 
-tElemento eleccionHumano();
+tElemento eleccionHumano();										// Muestra al usuario las jugadas que puede realizar y le asigna el tipo enumerado tElemento correspondiente para compararla con la jugada aleatoria de la maquina
 
-string elementoAstring(tElemento elemento);
+string elementoAstring(tElemento elemento);						// Convertimos el tipo tElemento a una varible de tipo String para poder imprimirlo en pantalla, almacenando la informacion en la variable aux
 
-tResultado quienGana(tElemento maquina, tElemento humano);
+tResultado quienGana(tElemento maquina, tElemento humano);		// Se compara el resultado elegido por la maquina y ekl jugador y se determina el ganador.
 
 int main() {
 	int var_menu = 1, aux, cont_partidas = 0, cont_empates = 0, cont_ganadas = 0, cont_perdidas = 0;
@@ -70,7 +70,7 @@ int main() {
 				opc_usuario = eleccionHumano();
 
 				srand(time(NULL));
-				aux = rand() % ELEMENTN;
+				aux = rand() % 5;
 
 				opc_maquina = tElemento(aux);
 				maq = elementoAstring(opc_maquina);
@@ -121,17 +121,17 @@ int main() {
 	return 0;
 }
 
-bool localizacionJugador(string apodo, string contra) {	//	Comprobamos que el apodo proporcionado se encuentre en el archivo de registro y devolvemos un valor bool en cada uno de los casos
+bool localizacionJugador(string apodo, string contra) {	
 
 	ifstream inputFile;
 	string registro, contras;
 	bool aut = false;
 
-	inputFile.open("Registro.txt");			//	Abrimos el archivo registro.txt
+	inputFile.open("Registro.txt");
 
 	if (inputFile.is_open()) {
 		
-		getline(inputFile, registro);		//	Leemos cada una de las lineas del archivo y lo guardamos en la variabel registro para despues imprimirlo
+		getline(inputFile, registro);
 		getline(inputFile, contras);
 		
 		while ((registro != "XXX") && (aut == false)){
@@ -148,7 +148,7 @@ bool localizacionJugador(string apodo, string contra) {	//	Comprobamos que el ap
 	return aut;
 }
 
-int menu() {								//	
+int menu() {
 
 	int opc = 5;
 
@@ -249,5 +249,3 @@ tResultado quienGana(tElemento maquina, tElemento humano) {
 	}
 	return res;
 }
-
-
