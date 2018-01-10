@@ -284,6 +284,14 @@ void codigoAleatorio(tCodigo codigo, bool admiteRepetidos) {
 
 void compararCodigos(const tCodigo codigo, const tCodigo hipotesis, int& colocados, int& descolocados) {
 
+	
+	/*
+	Codigo= 	AABA
+	Hipotesis= 	BBAB
+
+	Devolverá 2 descolocados
+	*/
+
 	colocados = 0;
 	descolocados = 0;
 
