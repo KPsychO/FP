@@ -1,0 +1,19 @@
+Una empresa guarda información acerca de sus empleados. La información almacenada sobre cada empleado consiste en su nombre, su edad, 
+su grado de estudios (ESO, Bachillerato, FP de Grado Medio, FP de Grado Superior, Grado, Máster, Doctorado) y el tipo de contratación
+(Fijo, En prácticas, Eventual o Becario). Suponiendo que N es el número máximo de empleados y que el númerode empleados de la plantilla
+de la empresa varía a lo largo del tiempo entre 0 y N, realiza las declaraciones de tipos adecuadas.
+
+Asimismo, implementa los siguientes subprogramas para gestionar la plantilla:
+
+a) Añadir un nuevo empleado al final de la plantilla.
+b) Añadir un nuevo empleado al principio de la plantilla.
+c) Añadir un nuevo empleado en la posición i de la plantilla.		
+d) Eliminar el último empleado de la plantilla.
+e) Eliminar el primer empleado de la plantilla.
+f) Eliminar el empleado en la posición i de la plantilla.
+g) Eliminar todos los empleados de la plantilla.
+h) Cargar el contenido de la plantilla de un fichero de texto.		
+i) Guardar el contenido de la plantilla en un fichero de texto.
+
+
+Resuélvelo	de	forma	modular	y	esta	vez	mediante	una	lista	de	tamaño	variable	soportada	por	un	array	de	datos	dinámicos.	
