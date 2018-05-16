@@ -1,9 +1,3 @@
-// Diego Atance | Yaojiajing
-// 1º C Ing. Informática UCM
-
-// Parte opcional: Funcionamiento de laser avanzado
-
-
 #include "Juego.h"
 #include "Puntuaciones.h"
 
