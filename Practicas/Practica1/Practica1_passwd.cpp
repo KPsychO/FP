@@ -18,7 +18,7 @@ typedef enum { empate, ganaHumano, ganaMaquina } tResultado;
 
 bool localizacionJugador(string apodo, string contra);			//	Comprobamos que el apodo proporcionado se encuentre en el archivo de registro y devolvemos un valor bool en cada uno de los casos
 
-int menu();														//	Imprimimos un menú con las opciones a las que tiene acceso el usuario (Solo registrados) y la devolvemos a la funcion main
+int menu();														//	Imprimimos un menÃº con las opciones a las que tiene acceso el usuario (Solo registrados) y la devolvemos a la funcion main
 
 bool mostrarReglas();											// Imprime por pantalla todo el texto situado en el archivo Reglas.txt salvo el centinela XXX que se encuentra al final del mismo
 
@@ -44,12 +44,12 @@ int main() {
 		cin >> apodo;
 	}
 	
-	cout << "Introduce tu contraseña: ";
+	cout << "Introduce tu contraseÃ±a: ";
 	cin >> contra;
 	
 	while (contra == "XXX"){
 		
-	cout << "Contraseña no valida" << endl << "Introduce tu contraseña: ";
+	cout << "ContraseÃ±a no valida" << endl << "Introduce tu contraseÃ±a: ";
 	cin >> contra;
 		
 	}
@@ -221,7 +221,7 @@ string elementoAstring(tElemento elemento) {
 	switch (elemento) {
 
 	case Piedra:	aux = "Piedra"; break;
-	case Papel:		aux = "Papel"; break;
+	case Papel:	aux = "Papel"; break;
 	case Tijeras: 	aux = "Tijeras"; break;
 	case Lagarto: 	aux = "Lagarto"; break;
 	case Spock: 	aux = "Spock"; break;
